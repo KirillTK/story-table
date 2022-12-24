@@ -1,0 +1,33 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run:dev": "ts-node ./src/server",
+    "run:prod": "ts-node ./src/server",
+    "lint": "eslint ./src --ext .ts",
+    "migrate:create": "node-pg-migrate create title",
+    "migrate:apply": "cross-env node-pg-migrate up && node-pg-migrate down"
+  },
+  "author": "KirillTK",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "node-pg-migrate": "^6.2.2",
+    "pg": "^8.8.0",
+    "redis": "^4.5.1",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.15",
+    "@types/pg": "^8.6.6",
+    "@typescript-eslint/eslint-plugin": "^5.47.0",
+    "@typescript-eslint/parser": "^5.47.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.30.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  }
+}
